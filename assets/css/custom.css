@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000;
+    color: #999;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+img {
+    width: 100%;
+}
+
+.netflix-homepage {
+    width: 100%;
+    height: 93vh;
+    position: relative;
+    background: url('../images/Netflix-bg-2.png') no-repeat center center/cover;
+}
+
+.netflix-homepage::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,0.6);
+    box-shadow: inset 100px 70px 150px #000000, -100px -70px 150px #000000;
+}
+
+.netflix-header {
+    position: relative;
+    z-index: 2;
+    height: 90px;
+}
+
+.netflix-header img {
+    width: 170px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.netflix-header a {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.homepage-content {
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 9rem;
+}
+
+
+.homepage-content h1 {
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.1;
+    margin: 0 0 2rem;
+}
+
+.homepage-content p {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin: 0 0 2rem;
+}
+
+
+
+/* --- Buttons CSS ------------------------------------------------------------------------ */
+.btn {
+    display: inline-block;
+    background: #e50914;
+    color: #fff;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+    border-radius: 2px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-rounded {
+    border-radius: 5px;
+}
+
+.btn-xl {
+    font-size: 2rem;
+    padding: 1.5rem 2.1rem;
+    text-transform: uppercase;
+}
+
+.btn-lg {
+    font-size: 1rem;
+    padding: 0.8rem 1.3rem;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+/* -- Social Media-Social Media-Social Media-Social Media-Social Media-Social Media-Social Media-Social MediaSocial MediaSocial MediaSocial MediaSocial MediaSocial MediaSocial MediaSocial MediaSocial Media ----------------------------------------------------------------------------------------- */
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    transition: 0.5s;
+    
+
+}
+
+.social-icons {
+    position: relative;
+    display: flex;
+}
+
+.social-icons li {
+    list-style: none;
+}
+
+/* -- DATA TEXT --------------------------------------- */
+.social-icons li::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,calc(-50% + 120px));
+    font-size: 10vw;
+    pointer-events: none;
+    font-weight: 700;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.social-icons li:hover::before {
+    opacity: 0.1;
+    transform: translate(-50%,calc(-50% + 150px));
+}
+
+.social-icons li a {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 4em;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    box-shadow: 0 25px 35px rgba(0,0,0,0.1);
+    transition: background 0.25;
+}
+
+.js-tilt-glare {
+    border-radius: 10px;
+}
+
+.social-icons li a:hover.facebook {
+    background: #1877f2;
+}
+
+.social-icons li a:hover.youtube {
+    background: #ff0000;
+}
+
+.social-icons li a:hover.instagram {
+    background: #e4405f;
+}
+
+.social-icons li a:hover.behance {
+    background: #053eff;
+}
+
+.social-icons li a:hover.linkedin {
+    background: #0099ff;
+}
+
+
+.social-icons li a .fa {
+    transition: 0.25s;
+    pointer-events: none;
+}
+
+.social-icons li a:hover .fa {
+    color: #fff;
+    transform: scale(1.75) translateZ(50px);
+}
